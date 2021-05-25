@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Push Notifications Using Node</title>
+</head>
+
+<body>
+  <div id="container">
+    <div id="left">
+      <h1>Push Notifications Using Node</h1>
+      <form onsubmit="event.preventDefault(); sendpush();">
+
+        <div class="inputdiv"><label for="title">Title</label>
+          <input type="text" id="title" oninput="text(this.value)">
+        </div>
+        <div class="inputdiv"><label for="body">Description</label>
+          <input type="text" id="body" oninput="decs(this.value)">
+        </div>
+        <div class="inputdiv"><label for="img">Image url</label>
+          <input type="text" id="img" onchange="imgss(this.value)">
+        </div>
+        <div class="inputdiv"><button type="submit" id="submit">Send Push</button></div>
+      </form>
+    </div>
+    <div id="right">
+      <div class="mobileimg">
+        <div id="push">
+          <div id="imgcontain">
+            <img id="imgs" src="" alt="" width="40px">
+          </div>
+          <div class="inblock">
+            <p id="pushtext">Title Here</p>
+            <p id="pushdec">Description Here</p>
+          </div>
+        </div>
+        <img src="./mobile.png" alt="mobile" width="400px">
+      </div>
+    </div>
+  </div>
+
+  <script src="client.js"></script>
+</body>
+
+</html>
